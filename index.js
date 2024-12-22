@@ -10,7 +10,7 @@ app.use(
     cors({
       origin: [
         "http://localhost:5173", 
-        "https://galeriainvisible.vercel.app" // URL temporal de Vercel
+        "https://galeriainvisible.vercel.app"
       ],
       methods: ["GET", "POST", "OPTIONS"],
       allowedHeaders: ["Content-Type", "Authorization"],
@@ -18,7 +18,6 @@ app.use(
     })
   );
   
-  // Manejador manual para solicitudes preflight OPTIONS
   app.options("/send-email", (req, res) => {
     res.header(
       "Access-Control-Allow-Origin",
